@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 with open("README.md") as fh:
-    description = fh.read
+    long_description = fh.read
 
 setup(
     name="AdventureGameTemplate",
     version="1.0.0",
     packages=find_packages,
-    short_description = "Template for text based adventure games.",
-    description=description,
+    description = "Template for text based adventure games.",
+    long_description=long_description,
     url="https://github.com/xdaiyan/AdventureGameTemplate",
     author="Daiyan Chowdhury",
     author_email="daiyanchowdhury9916@gmail.com",
