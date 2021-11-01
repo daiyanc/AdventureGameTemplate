@@ -1,23 +1,26 @@
-from setuptools import setup, find_packages
+import setuptools
 
-with open("README.md") as fh:
-    long_description = fh.read
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-setup(
+setuptools.setup(
     name="AdventureGameTemplate",
-    version="1.0.0",
-    packages=find_packages,
-    description = "Template for text based adventure games.",
-    long_description=long_description,
-    url="https://github.com/xdaiyan/AdventureGameTemplate",
+    version="0.0.1",
     author="Daiyan Chowdhury",
     author_email="daiyanchowdhury9916@gmail.com",
-    license="MIT",
+    description="Short entry level text based adventure game template.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/xdaiyan/AdventureGameTemplate",
+    project_urls={
+        "Bug Tracker": "https://github.com/xdaiyan/AdventureGameTemplate/issues",
+    },
     classifiers=[
-        "License :: MIT License",
-        "Programming Language :: Python :: 3"
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
-    install_requires = [
-        "requests"
-    ]
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
 )
