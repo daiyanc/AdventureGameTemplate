@@ -3,14 +3,13 @@ from environment import environment_vars
 class PlayerCommands:
     # InDir: attack(), walk(), item_bag()
 
-    def __init__(self, environment:environment_vars.Environment):
+    def __init__(self):
         self.bag = {}
         self.position = 0
         self.battle_select = {
             'Slash': 30,
             'Punch': 10
         }
-        self.environment = environment
 
 
     def get_attacks(self):
