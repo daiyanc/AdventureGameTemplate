@@ -1,5 +1,3 @@
-from commands import player_commands
-
 class Player:
     def __init__(self, hp=100, base_stat=10, accuracy=70, block=10):
         self.hp = hp
@@ -34,6 +32,9 @@ class Player:
     def set_block(self, value:int):
         self.block = value
         return self.block
+
+    def __str__(self):
+        return f'Player stats | HP: {self.hp}, Base Stats: {self.base_stat}, Accuracy: {self.accuracy}, Block Chance: {self.block}'
 
     hp = property(get_hp, set_hp)
     stats = property(get_stats, set_stats)
