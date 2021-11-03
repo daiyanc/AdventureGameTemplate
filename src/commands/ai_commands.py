@@ -44,7 +44,3 @@ class AiCommands:
     def drop(self):
         random_select = random.randint(0, 1)
         return f'{self.name} has dropped {self.loot_table[random_select]}!'    
-
-    loot = property(get_loot, set_loot)
-    name = property(get_name, set_name)
-    attacks = property(get_attacks, set_attacks)

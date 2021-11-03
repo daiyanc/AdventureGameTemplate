@@ -35,11 +35,6 @@ class Environment:
         self.environment_boost = boost
         return self.environment_boost
 
-    length = property(get_length, set_length)
-    width = property(get_length, set_length)
-    npcs = property(get_npcs, set_npcs)
-    environment_boost = property(get_boost, set_boost)
-
 class Seed(Environment):
     def __init__(self):
         self.seeded_environment = {

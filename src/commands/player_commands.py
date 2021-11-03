@@ -9,7 +9,6 @@ class PlayerCommands:
             'Punch': 10
         }
 
-
     def get_attacks(self):
         return self.battle_select
 
