@@ -1,5 +1,5 @@
-class NPC:
-    def __init__(self, hp=10, base_stat=1, accuracy=40, block=0):
+class Character():
+    def __init__(self, hp=100, base_stat=10, accuracy=70, block=10):
         self.hp = hp
         self.base_stat = base_stat
         self.accuracy = accuracy
@@ -8,8 +8,8 @@ class NPC:
     def get_hp(self):
         return self.hp
     
-    def set_hp(self, hp:int):
-        self.hp = hp
+    def set_hp(self, value:int):
+        self.hp = value
         return self.hp
 
     def get_stats(self):
@@ -33,10 +33,5 @@ class NPC:
         self.block = value
         return self.block
 
-    def __str___(self):
-        return f'Player stats | HP: {self.hp}, Base Stat: {self.base_stat}, Accuracy: {self.accuracy}, Block: {self.block}'
-        
-    hp = property(get_hp, set_hp)
-    stats = property(get_stats, set_stats)
-    accuracy = property(get_accuracy, set_accuracy)
-    block = property(get_block, set_block)
+    def __str__(self):
+        return f'Stats | HP: {self.hp}, Base Stats: {self.base_stat}, Accuracy: {self.accuracy}, Block Chance: {self.block}'
