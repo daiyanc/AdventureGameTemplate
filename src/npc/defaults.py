@@ -35,6 +35,7 @@ class NPC:
 
     def __str___(self):
         return f'Player stats | HP: {self.hp}, Base Stat: {self.base_stat}, Accuracy: {self.accuracy}, Block: {self.block}'
+        
     hp = property(get_hp, set_hp)
     stats = property(get_stats, set_stats)
     accuracy = property(get_accuracy, set_accuracy)
