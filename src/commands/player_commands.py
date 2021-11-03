@@ -1,5 +1,3 @@
-from environment import environment_vars
-
 class PlayerCommands:
     # InDir: attack(), walk(), item_bag()
 
@@ -43,8 +41,6 @@ class PlayerCommands:
 
         if direction.title() == 'East':
             self.position += distance
-            if self.position > self.environment.get_length():
-                self.position -= self.environment.get_length()
         return f'Traveling {direction} for {distance} pixels...'
 
     def add_item(self, item:str):
