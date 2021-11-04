@@ -3,8 +3,7 @@ import random
 class AiCommands:
     # InDir: attack, loot_drops()
 
-    def __init__(self, name='Slime'):
-        self.name = name
+    def __init__(self):
         self.loot_table = {
             0: 'Wooden Sword',
             1: '10 Gold'
@@ -13,13 +12,6 @@ class AiCommands:
             0: 'Slash',
             1: 'Bite'
         }
-
-    def get_name(self):
-        return self.name
-
-    def set_name(self, name:str):
-        self.name = name
-        return self.name
 
     def get_loot(self):
         return self.loot_table
@@ -39,8 +31,11 @@ class AiCommands:
 
     def attack(self):
         random_select = random.randint(0, 1)
-        return f'{self.name} has attacked with {self.battle_select[random_select]}!'
+        return f'Current attack: {self.battle_select[random_select]}!'
 
     def drop(self):
         random_select = random.randint(0, 1)
-        return f'{self.name} has dropped {self.loot_table[random_select]}!'    
+        return f'Dropped: {self.loot_table[random_select]}!'    
+
+    def __str__(self):
+        return f'Battle Select: {self.battle_select} \n Loot table: {self.loot_table}'

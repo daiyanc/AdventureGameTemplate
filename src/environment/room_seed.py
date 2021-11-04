@@ -45,3 +45,6 @@ class Seed(Environment):
         self.length = self.set_length(random.randint(200, 400))
         self.width = self.set_width(random.randint(200, 400))
         self.npcs = self.set_npcs(random.randint(1, 9))
+
+    def __str__(self) -> str:
+        return f'Environment: {self.length} by {self.width}, # NPCS: {self.npcs}'

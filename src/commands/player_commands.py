@@ -46,3 +46,6 @@ class PlayerCommands:
         bag_index = 0
         self.bag[bag_index] = item
         bag_index += 1
+
+    def __str__(self):
+        return f'Current bag: {self.bag} \n Battle Select: {self.battle_select} \n Position on map: {self.position}'
